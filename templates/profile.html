@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Recipient Profile{% endblock %}
+
+{% block content %}
+<h2>{{ 'Edit' if profile.id else 'Create' }} Recipient Profile</h2>
+<form method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.name.label }}<br>
+        {{ form.name(size=32) }}
+        {% for error in form.name.errors %}
+        <span style="color: red;">{{ error }}</span>
+    {% endfor %}
+    </p>
+    <p>
+        {{ form.birthday.label }}<br>
+        {{ form.birthday() }}
+    </p>
+    <p>
+        {{ form.gender.label }}<br>
+        {{ form.gender(size=32) }}
+    </p>
+    <p>
+        {{ form.relationship.label }}<br>
+        {{ form.relationship(size=32) }}
+    </p>
+    <p>
+        {{ form.interests.label }}<br>
+        {{ form.interests() }}
+    </p>
+    <p>
+        {{ form.occasion.label }}<br>
+        {{ form.occasion(size=32) }}
+    </p>
+    <p>
+        {{ form.budget.label }}<br>
+        {{ form.budget() }}
+    </p>
+    <p>
+        {{ form.additional_details.label }}<br>
+        {{ form.additional_details() }}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

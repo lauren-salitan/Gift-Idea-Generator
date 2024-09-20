@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2>Welcome, {{ current_user.username }}!</h2>
+<p>Manage your gift recipient profiles or start a new gift idea search.</p>
+<a href="{{ url_for('create_profile') }}">Create New Recipient Profile</a> |
+<a href="{{ url_for('view_profiles') }}">View Recipient Profiles</a> |
+<a href="{{ url_for('search') }}">Search for Gift Ideas</a>
+{% endblock %}
