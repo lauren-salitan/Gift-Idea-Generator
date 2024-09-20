@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #f0f0f0;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+header h1 {
+    text-align: left;
+}
+
+main {
+    padding: 20px;
+}
+
+input[type="text"], input[type="password"], textarea {
+    width: 300px;
+    padding: 8px;
+}
+
+input[type="submit"] {
+    background: blue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: darkblue;
+}
