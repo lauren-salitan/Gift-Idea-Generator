@@ -1,8 +1,8 @@
 from flask import render_template, redirect, url_for, flash, request, jsonify, current_app, Flask, session, g
-from .models import User, RecipientProfile, connect_db, db
-from .forms import LoginForm, RegistrationForm, RecipientProfileForm
+from models import User, RecipientProfile, connect_db, db
+from forms import LoginForm, RegistrationForm, RecipientProfileForm
 from flask_login import current_user, login_user, logout_user, login_required, LoginManager
-from .utils import generate_gift_ideas
+from utils import generate_gift_ideas
 import os
 
 CURR_USER_KEY = "curr_user"

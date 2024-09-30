@@ -3,7 +3,7 @@ from app import app, db
 from models import User, RecipientProfile
 from forms import LoginForm, RegistrationForm, RecipientProfileForm
 from flask_login import current_user, login_user, logout_user, login_required
-from .utils import generate_gift_ideas
+from utils import generate_gift_ideas
 
 @app.route('/')
 @login_required
